@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Senthu!!! 🎂</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="bgMusic" loop src="audio.mp3"></audio>
+
+    <div id="intro-overlay">
+      <div id="countdown-text">3</div>
+    </div>
+
+    <header>
+      <canvas id="celebration-canvas"></canvas>
+      <h1>Happy Birthday, Senthu!!! 🎂</h1>
+      <img src="bubu.gif" alt="Cute panda celebration" class="header-gif" />
+      <p>A little digital corner dedicated to us.</p>
+      <a
+        href="#about-us-start"
+        class="enter-btn"
+        onclick="scrollToMemories(event)"
+      >
+        Our Story ❤️
+      </a>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-us-section" id="about-us-start">
+      <div class="about-bg" aria-hidden="true"></div>
+      <div class="about-content">
+        <h2 class="about-title">About Us</h2>
+        <p class="about-text">
+          You came into my life like a beautiful plot twist, turning ordinary
+          days into unforgettable memories. Every moment with you feels like a
+          scene from a love story I've always wanted to live.
+        </p>
+        <div class="heart-divider">❤️</div>
+        <p class="about-text">
+          From laughs shared over late-night conversations to adventures that
+          made us grow closer, you've become my favorite part of every day.
+          Here's to celebrating not just your birthday, but the incredible
+          person you are and the journey we're creating together.
+        </p>
+      </div>
+      <a
+        href="#timeline-start"
+        class="enter-btn timeline-btn"
+        onclick="scrollToTimeline(event)"
+      >
+        Step Into Our Memories ❤️
+      </a>
+    </section>
+
+    <section class="timeline-section" id="timeline-start">
+      <h2 class="section-title">Our Timeline</h2>
+
+      <div class="timeline-horizontal-container">
+        <div class="memory-card" onclick="openMemory(this)">
+          <div class="card-date">Day We Met</div>
+          <h3 class="card-content">The Beginning of Us</h3>
+          <p class="card-content">
+            Remember when we first crossed paths? I knew right then that you
+            were going to be special.
+          </p>
+          <img src="photo1.jpeg" alt="The day we met" class="card-content" />
+        </div>
+
+        <div class="memory-card" onclick="openMemory(this)">
+          <div class="card-date">Our Favourite Date</div>
+          <h3 class="card-content">Special Moment</h3>
+          <p class="card-content">
+            That one date after exam where we completely lost track of time.
+            Best day ever.
+          </p>
+          <img src="photo2.jpeg" alt="Our getaway" class="card-content" />
+        </div>
+
+        <div class="memory-card" onclick="openMemory(this)">
+          <div class="card-date">Our First Big Adventure</div>
+          <h3 class="card-content">Unforgettable Experience</h3>
+          <p class="card-content">
+            Thank you for all the laughs, the late-night talks, and always being
+            my safe space.
+          </p>
+          <img src="photo3.jpeg" alt="Recent memory" class="card-content" />
+        </div>
+      </div>
+
+      <!-- Memory Modal -->
+      <div id="memoryModal" class="memory-modal">
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <div class="modal-content">
+          <button class="modal-close" onclick="closeModal()">✕</button>
+          <div class="modal-body">
+            <div class="modal-date"></div>
+            <h2 class="modal-title"></h2>
+            <p class="modal-description"></p>
+            <img class="modal-image" src="" alt="Memory photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift-section">
+      <h2>I have a final surprise for you...</h2>
+      <p>Click the gift box to open your birthday letter!</p>
+      <div class="gift-box" id="giftBox" onclick="revealLetter()">🎁</div>
+      <div class="hidden-letter" id="secretLetter">
+        <h3>My Dearest Senthu,</h3>
+        <br />
+        <p>
+          Happy Birthday Chlloo! Writing code is easy, but finding the words to
+          tell you how much you mean to me is the real challenge. Thank you for
+          being my partner, my best friend, and my favorite reality in this
+          world.
+        </p>
+        <p>May the universe always find a way to keep us together. ❤️</p>
+        <br />
+        <p>With all my love,<br />Pavi...</p>
+      </div>
+    </section>
+
+    <button id="musicToggle" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
