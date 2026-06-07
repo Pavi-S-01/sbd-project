@@ -1,2 +1,0 @@
-This file is created for my handson practice.
-Adding this line from github.
